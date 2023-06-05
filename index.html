@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html >
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>阿里1688</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div>
+        <div class="container">
+            <div class="text text-background">1688</div>
+            <div class="text text-color">1688</div>
+
+
+        </div>
+        <div class="container text-background2">伺服器超載請稍後</div>
+        <div class="container">
+            <div class="circ1 preloader"></div>
+            <div class="circ2 preloader"></div>
+            <div class="circ3 preloader"></div>
+            <div class="circ4 preloader"></div>
+        </div >
+
+    </div>
+    <div class="container"  id="countdown"></div>
+
+    <script>
+        // 設定時間
+        let second = 10;
+
+        // 定義計時器
+        let secondDown = setInterval(function() {
+            second--;
+            document.getElementById("countdown").innerHTML = second + " 秒後自動重新整理";
+            if (second === 0) {
+                clearInterval(secondDown);
+
+                location.reload();
+            }
+        }, 1000);
+    </script>
+
+</body>
+</html>
